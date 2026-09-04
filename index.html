@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aidan Singh Khorana - Business & Data</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background-color: #ffffff;
+        }
+
+        header {
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .about-highlights {
+            list-style: none;
+        }
+
+        .about-highlights li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .about-highlights li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .bbicc-container {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 40px;
+            border-left: 4px solid #3498db;
+        }
+
+        .bbicc-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .bbicc-badge {
+            background-color: #3498db;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .bbicc-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .bbicc-detail-item h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: #7f8c8d;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .bbicc-detail-item p {
+            font-size: 1rem;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+
+        .bbicc-description {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #ecf0f1;
+        }
+
+        .bbicc-description p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .project-card {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            border: 2px dashed #ecf0f1;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            border-color: #bdc3c7;
+            transform: translateY(-2px);
+        }
+
+        .project-card p {
+            color: #95a5a6;
+            font-size: 1rem;
+        }
+
+        .resume-section {
+            text-align: center;
+        }
+
+        .resume-button {
+            display: inline-block;
+            background-color: #2c3e50;
+            color: white;
+            padding: 14px 40px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .resume-button:hover {
+            background-color: #34495e;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .contact-item {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .contact-item h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            color: #7f8c8d;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+
+        .contact-item a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+            word-break: break-word;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 30px 20px;
+            text-align: center;
+            color: #95a5a6;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .bbicc-details {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .bbicc-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Aidan Singh Khorana</h1>
+            <p class="subtitle">Business & Data | Thammasat University | Bangkok</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>BBA student at Thammasat University (Finance & Accounting) with experience in data analytics, process automation, and business intelligence. Passionate about problem-solving through data and building tools that drive impact.</p>
+                    <p>Currently focused on management consulting and exploring quantitative finance. Experienced working on cross-functional projects at scale—from livestream analytics at TikTok Shop to launching supplier networks for startups.</p>
+                </div>
+                <div>
+                    <ul class="about-highlights">
+                        <li><strong>Location:</strong> Bangkok, Thailand</li>
+                        <li><strong>Education:</strong> BBA (Finance & Accounting) — Double Major</li>
+                        <li><strong>Exchange:</strong> University of Richmond (Aug 2025 – May 2026)</li>
+                        <li><strong>Skills:</strong> Python, Java, SQL, R, C++</li>
+                        <li><strong>Tools:</strong> Excel, PowerPoint, Dashboarding, Photoshop</li>
+                        <li><strong>Graduation:</strong> May 2027</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BBICC Section -->
+    <section id="bbicc">
+        <div class="container">
+            <h2>BBICC 2025 — 3rd Place</h2>
+            <div class="bbicc-container">
+                <div class="bbicc-header">
+                    <div>
+                        <h3>Belgrade Business International Case Competition</h3>
+                        <p style="color: #7f8c8d; margin-top: 5px;">March 9–15, 2025 | Belgrade, Serbia</p>
+                    </div>
+                    <div class="bbicc-badge">🏆 3rd Place</div>
+                </div>
+
+                <div class="bbicc-details">
+                    <div class="bbicc-detail-item">
+                        <h4>Competition</h4>
+                        <p>Top 20 universities. 3 business cases over 7 days.</p>
+                    </div>
+                    <div class="bbicc-detail-item">
+                        <h4>Ranking</h4>
+                        <p>3rd Place finalist out of 20 international teams</p>
+                    </div>
+                </div>
+
+                <div class="bbicc-description">
+                    <p><strong>What we did:</strong> Competed against teams from leading business schools worldwide, solving real-world business challenges from industry partners including Oktacron, Serbian Chamber of Commerce, and Merck Sharp & Dohme.</p>
+                    <p>Cases included developing a cybersecurity AI solution business plan, creating support mechanisms for non-tech startups, and strategic business analysis under tight deadlines.</p>
+                    <p><strong>Impact:</strong> Represented Thammasat as one of five selected case team members. Competing among the top undergraduate business schools globally strengthened analytical and presentation skills.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <p style="color: #7f8c8d; margin-bottom: 40px;">Building and shipping soon. Coming soon:</p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <p>Project 1</p>
+                </div>
+                <div class="project-card">
+                    <p>Project 2</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume">
+        <div class="container">
+            <h2>Resume</h2>
+            <div class="resume-section">
+                <p>Download my full resume:</p>
+                <a href="Resume_updated.pdf" class="resume-button">📄 Download Resume</a>
+                <p style="color: #95a5a6; margin-top: 20px; font-size: 0.9rem;">PDF • Updated September 2026</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <a href="mailto:aidan_sin66@tbs.tu.ac.th">aidan_sin66@tbs.tu.ac.th</a>
+                </div>
+                <div class="contact-item">
+                    <h3>LinkedIn</h3>
+                    <a href="https://linkedin.com/in/aidansinghkhorana" target="_blank">linkedin.com/in/aidansinghkhorana</a>
+                </div>
+                <div class="contact-item">
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/xylos" target="_blank">github.com/xylos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Built with clean code. Hosted on GitHub Pages.</p>
+        </div>
+    </footer>
+</body>
+</html>
