@@ -402,6 +402,125 @@
             font-weight: 500;
         }
 
+        .case-card {
+            grid-column: 1 / -1;
+            text-align: left;
+            padding: 44px;
+        }
+
+        .case-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .case-card > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .case-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 28px;
+        }
+
+        .case-kicker {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #a8dadc;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .case-card h3 {
+            font-size: 1.5rem;
+            color: #ffffff;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .case-status {
+            border: 1px solid rgba(34, 197, 94, 0.5);
+            color: #22c55e;
+            padding: 8px 16px;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .case-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 24px 0;
+            margin-bottom: 28px;
+            border-top: 1px solid rgba(139, 92, 246, 0.25);
+            border-bottom: 1px solid rgba(139, 92, 246, 0.25);
+        }
+
+        .case-stats strong {
+            display: block;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.7rem;
+            color: #ffffff;
+            line-height: 1.2;
+        }
+
+        .case-stats span {
+            font-size: 0.85rem;
+            color: #a8dadc;
+        }
+
+        .case-card p.case-text {
+            color: #d6e3f0;
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .case-steps {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            margin-bottom: 24px;
+        }
+
+        .case-steps li {
+            background: rgba(10, 14, 39, 0.45);
+            border: 1px solid rgba(59, 130, 246, 0.25);
+            border-radius: 8px;
+            padding: 16px;
+            font-size: 0.88rem;
+            color: #d6e3f0;
+            line-height: 1.6;
+        }
+
+        .case-steps b {
+            display: block;
+            color: #22c55e;
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+        }
+
+        .case-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .case-tags span {
+            font-size: 0.78rem;
+            color: #c4b5fd;
+            background: rgba(139, 92, 246, 0.15);
+            padding: 5px 12px;
+            border-radius: 999px;
+        }
+
         .resume-section {
             text-align: center;
             margin-top: 50px;
@@ -546,6 +665,23 @@
                 grid-template-columns: 1fr;
             }
 
+            .case-card {
+                padding: 28px 22px;
+            }
+
+            .case-top {
+                flex-direction: column;
+            }
+
+            .case-stats {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .case-steps {
+                grid-template-columns: 1fr 1fr;
+            }
+
             .bbicc-header {
                 flex-direction: column;
             }
@@ -583,13 +719,13 @@
             <h2>About</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>BBA student at Thammasat University (Finance & Accounting) solving problems with data. Experience in analytics, automation, and business intelligence—from livestream analytics at TikTok Shop to building tools that ship.</p>
+                    <p>BBA student at Thammasat University (Finance, minor in Accounting) solving problems with data. Experience in analytics, automation, and business intelligence—from livestream analytics at TikTok Shop to building tools that ship.</p>
                     <p>Focused on management consulting and quantitative finance. Excited about building scalable solutions, analyzing complex data sets, and shipping products that matter.</p>
                 </div>
                 <div>
                     <ul class="about-highlights">
                         <li><strong>Based:</strong> Bangkok, Thailand</li>
-                        <li><strong>Program:</strong> BBA, Double Major (Finance & Accounting)</li>
+                        <li><strong>Program:</strong> BBA, Finance major, Accounting minor</li>
                         <li><strong>Exchange:</strong> University of Richmond, Aug 2025–May 2026</li>
                         <li><strong>Languages:</strong> Python, Java, SQL, R, C++</li>
                         <li><strong>Tools:</strong> Excel, Dashboarding, PowerPoint, Photoshop</li>
@@ -636,14 +772,39 @@
     <section id="projects">
         <div class="container">
             <h2>Projects</h2>
-            <p style="color: #a8dadc; margin-bottom: 50px; font-weight: 300; font-size: 1rem;">Building in the open. Coming soon:</p>
             <div class="projects-grid">
-                <div class="project-card">
-                    <p>Project 1</p>
-                </div>
-                <div class="project-card">
-                    <p>Project 2</p>
-                </div>
+                <article class="project-card case-card">
+                    <div class="case-top">
+                        <div>
+                            <p class="case-kicker">Shopee Ultimate Case Challenge · Thailand 2026</p>
+                            <h3>Cutting failed cash-on-delivery orders for Shopee Thailand</h3>
+                        </div>
+                        <span class="case-status">Round 2 · In-person pitch</span>
+                    </div>
+
+                    <div class="case-stats">
+                        <div><strong>THB 455M</strong><span>yearly loss from failed deliveries</span></div>
+                        <div><strong>85%</strong><span>of failures come from COD, only 35% of orders</span></div>
+                        <div><strong>~THB 3.5B</strong><span>projected NPV of the plan</span></div>
+                    </div>
+
+                    <p class="case-text">COD buyers fail at 10x the rate of prepaid buyers, and every failed parcel costs Shopee about THB 104 in wasted delivery and lost commission. Our team proposed a reliability score that decides who gets extra checkpoints, three targeted interventions, and a cash-flow model to prove the payback.</p>
+
+                    <ul class="case-steps">
+                        <li><b>BRS</b>A 0–100 buyer reliability score with visible reasons, appeals and a path to recover.</li>
+                        <li><b>U SURE?</b>A 5-minute confirm window for at-risk buyers before the parcel ships.</li>
+                        <li><b>U FREE?</b>Buyer-chosen 3-hour delivery slots so nobody is "not home".</li>
+                        <li><b>U IN?</b>Riders help COD buyers sign up for ShopeePay at the door.</li>
+                    </ul>
+
+                    <div class="case-tags">
+                        <span>Root-cause analysis</span>
+                        <span>5-year DCF / NPV</span>
+                        <span>Capex &amp; opex build</span>
+                        <span>Product design</span>
+                        <span>PDPA &amp; risk guardrails</span>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -654,7 +815,7 @@
             <h2>Resume</h2>
             <div class="resume-section">
                 <p>Full background and experience</p>
-                <a href="Resume_updated.pdf" class="resume-button">Download Resume</a>
+                <a href="Resume_updated%20(1).pdf" class="resume-button">Download Resume</a>
                 <p style="color: #7c8ba8; margin-top: 20px; font-size: 0.85rem; font-weight: 300;">PDF • Updated September 2026</p>
             </div>
         </div>
